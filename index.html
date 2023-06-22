@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+  <header>
+    <div class="header-box">
+      <nav>
+        <div class="navbar"> 
+          <div class="navbar-start">
+            <ul>
+              <li><img src="./images/logo.svg" alt="" class="logo" ></li>
+              <li id="product" class="product-btn">Product <a href="#"><img src="./images/icon-arrow-light.svg" alt="" style="margin-left: 2px; " class="arrow-1"> </a>
+              <div class="dropdown-1">
+                <a href=""class="padding-top">Overview </a>
+                <a href="">Pricing </a>
+                <a href="">Marketplace </a>
+                <a href="">Features </a>
+                <a href="" class="padding-bottom">Integrations </a>
+              </div>
+              </li>
+              <li id="company" class="company-btn">Company<a href="#"><img src="./images/icon-arrow-light.svg" alt="" style="margin-left: 3px;" class="arrow-2"> </a>
+                <div class="dropdown-2 ">
+                  <a href="" class="padding-top">About </a>
+                  <a href="">Team </a>
+                  <a href="">Blog </a>
+                  <a href="" class="padding-bottom">Careers </a>
+                </div>
+              </li>
+              <li id="connect" class="connect-btn">Connect <a href="#"><img src="./images/icon-arrow-light.svg" alt="" style="margin-left: 2px;" class="arrow-3"> </a>
+                <div class="dropdown-3 ">
+                  <a href="" class="padding-top">Contact </a>
+                  <a href="">Newsletter</a>
+                  <a href="" class="padding-bottom">LinkedIn</a>
+                </div></li>
+              </div>
+            </div>
+              </ul>
+           </div>
+            <div class="navbar-end">
+              <ul>
+                <li id="login"><button class="btn btn-1">Login </button></li>
+                <li id="sign-up"><button class="btn btn-2">Sign Up</button></li>
+              </ul>
+            </div>
+        </div>
+      </nav>
+      <!-- end of header -->
+    </div>
+      <div class="Headline"> <p class="headline-text">  A modern publishing platform </p></div>
+      <div class ="subHeadline"> <p class="subheadline-text">Grow your audience and build your online brand</p> </div>
+      <div class="header-buttons">
+        <button class="btn header-btn ">Start for Free</button>
+        <button class=" btn header-btn header-btn-2">Learn more</button>
+      </div>
+      <div class="hamburger" > <img class="image" src="./images/icon-hamburger.svg" onclick="Toggle()" />
+              
+        <div class="overflow">
+          <div class="ham-down" >
+            <div class="innerdown">
+              <a href="" class="arrow-lin" style="cursor:default; height: 50px; width: 100px; display: flex; align-items: center; font-family: sans-serif; color: hsl(208, 49%, 24%); font-family:
+               sans-serif; font-weight:600;">
+                Product 
+                <img src="./images/icon-arrow-light copy.svg" class="arrow-col" style="margin-left: 4px; margin-top: 6px; cursor: pointer;">
+              </a>  
+              <!-- <span href=""  class="inner-list">Overview</span> -->
+              <!-- <div class="inner-drop-1">
+                <a href="">Overview</a>
+                <a href="">Pricing</a>
+                <a href="">Marketplace</a>
+                <a href="">Features</a>
+                <a href="">Integrations</a>
+              </div>
+            </div> -->
+              
+            <a href="" style="height: 50px; width: 90px; display: flex; align-items: center; font-family: sans-serif; color: hsl(208, 49%, 24%);font-weight:600;">
+              Company <img src="./images/icon-arrow-light copy.svg" style="margin-left: 4px; margin-top: 6px;">
+            </a>
+            <a href="" style="height: 50px; width: 90px; display: flex; align-items: center;font-family: sans-serif; color: hsl(208, 49%, 24%);font-weight:600;">
+              Connect<img src="./images/icon-arrow-light copy.svg" style="margin-left: 4px; margin-top: 6px;">
+            </a>
+            <a href="" style="height: 50px; width: 90px; display: flex; align-items: center;font-family: sans-serif;">
+              <button style="height: 50px; width: 80px; padding:10px 13px ;border:none;  font-size: 17.5px; font-family: 'Overpass', sans-serif; color: hsl(208, 49%, 24%);font-weight:600; " class="">Login</button>
+            </a>
+          <a href="" style="height: 50px; width: 85px;  ; font-family: sans-serif; padding-left: 6rem;
+          padding-right: 12rem;">
+            <button class="sign-up" style="height: 50px; width: 102px; white-space: nowrap; padding:10px 21px ;border:none;  font-size: 16px; font-family: 'Overpass', sans-serif; color: hsl(208, 49%, 24%);
+            font-weight:600; background-color: whitesmoke; background-image: linear-gradient(to right,hsl(13, 100%, 72%),
+             hsl(353, 100%, 62%)); border-radius: 20px;
+            color: white; padding-left: 20px; margin-right: 2px;">Sign Up</button></a>
+        </div>
+      </div>
+  </header>
+  <section class="full-container">
+    <div class="heading">
+      <div class="heading-body"> Designed for the future</div>
+    </div>
+    <div class="sec-1-body">
+    <div class="sub-body-heading-1">
+      <div class="sec-1-sub-heading">  Introducing an extensible editor</div>
+      <div class="sub-body-text">   Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+        The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+        videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+        change the looks of a blog. </div>
+      <div class="sec-1-sub-heading">Robust Content Management</div>
+      <div class="sub-body-text">Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+        by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+      </div>
+    </div>
+    <div class="sub-body-heading-2">
+      <img src="./images/illustration-editor-desktop.svg" alt="" class="sec-1-icon">
+    </div>
+    </div>
+    
+  </section>
+  <section class="half-container">
+    <div class="sec-3">
+      <div class="overflow-container">
+        <div class="overflow-item before"></div>
+      </div>
+        <div class="overflow-item after"></div>
+        <div class="sec-3-body">
+          <div class="sec-3-heading">
+            State of the Art Infrastructure
+          </div>
+          <div class="sec-3-text">
+            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="full-container">
+    <div class="sec-4-body">
+      <div class="sec-4sub-body">
+        <div class="sec-4-icon">
+          
+        </div>
+      </div>
+      <div class="sec-4sub-body">
+        <div class="sec-4-heading">Free, open, simple</div>
+        <div class="sec-4-text">Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</div>
+        <div class="sec-4-heading nm"  >Powerful tooling</div>
+        <div class="sec-4-text">Powerful tooling
+          Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+          capable of producing even the most complicated sites.
+        </div>
+      </div>
+    </div>
+   </section>
+  <footer class="footer">
+    <div class="sec-5-foot">
+      <div class="footer-elem"> <img src="./images/logo.svg" alt=""></div>
+      <div class="footer-elem"> <div class="footer-head xm">Product</div>
+         <div class="footer-list">
+           <ul>
+              <li><a href="" style="text-decoration: none; color: aliceblue;"> Overview</li>
+              <li><a href="" style="text-decoration: none;  color: aliceblue;"> Pricing</li>
+              <li><a href="" style="text-decoration: none; color: aliceblue;"> Marketplace</li>
+              <li><a href="" style="text-decoration: none; color: aliceblue;"> Features</li>
+              <li><a href="" style="text-decoration: none; color: aliceblue;"> Integrations</li>
+          </ul>
+         </div>
+      </div>
+      <div class="footer-elem"> <div class="footer-head">Company</div>
+        <div class="footer-list">
+          <ul>
+             <li><a href="" style="text-decoration: none; color: aliceblue;"> About</li>
+             <li><a href="" style="text-decoration: none; color: aliceblue;"> Team</li>
+             <li><a href="" style="text-decoration: none; color: aliceblue;"> Blog</li>
+             <li><a href="" style="text-decoration: none; color: aliceblue;"> Careers</li>
+         </ul>
+        </div>
+      </div>
+      <div class="footer-elem"> <div class="footer-head">Connect</div>
+        <div class="footer-list">
+          <ul>
+             <li><a href="" style="text-decoration: none; color: aliceblue;"> Contact</li>
+             <li><a href="" style="text-decoration: none; color: aliceblue;"> Newsletter</li>
+             <li><a href=""  style="text-decoration: none; color: aliceblue;"> LinkedIn </li>
+         </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="script.js"></script>
+</body>
+</html>

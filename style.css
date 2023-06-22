@@ -1,0 +1,2111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } 
+  html { 
+    scroll-behavior: smooth;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Poppins:ital,wght@0,400;1,200;1,700;1,800&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+  
+  body {
+    /* font-family: 'Overpass', sans-serif; */
+    color: aliceblue;
+  }
+  :root {
+    --white--text: hsl(0, 0%, 100%);
+    /* footer text */
+    --grayish--blue: hsl(240, 2%, 79%);
+    /* body copy */
+    --dark-blue--body: hsl(207, 13%, 34%);
+    /* footer bg  */
+    --black--vlue: hsl(240, 10%, 16%);
+    /* background-color; mobile nav */
+    --Very--light--red: hsl(13, 100%, 72%);
+    --Light--red: hsl(353, 100%, 62%);
+  
+    /* Background gradient - body: */
+  
+    --Very--dark--gray--blue: hsl(237, 17%, 21%);
+    --Very--dark--desaturated--blue: hsl(237, 23%, 32%);
+  }
+  
+  /* div{
+      width: 1440px;
+  } */
+
+  /* header{
+    position: relative;
+  } */
+
+  .full-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* border: 2px solid red; */
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    /* padding-right: 40px; */
+  }
+
+  .header-box {
+    height: 67vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
+    border-bottom-left-radius: 100px;
+    overflow: hidden;
+  }
+  .header-box::before {
+    content: "";
+    width: 188.875rem;
+    height: 185.875rem;
+    background-image: url("./images/bg-pattern-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 42%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .navbar-start ul,
+  .navbar-end ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 2;
+  }
+  .navbar-start ul {
+    position: absolute;
+    margin-left: 55px;
+    gap: 2rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 54px;
+    top: 1.8%;
+  }
+  .navbar-end ul {
+    position: absolute;
+    left: 67%;
+    gap: 2rem;
+    margin-right: 200px;
+  }
+  .navbar-start ul li,
+  .navbar-end ul {
+    list-style: none;
+  }
+  .hamburger {
+    background-color: transparent;
+    border: none;
+    display: none;
+  }
+  .btn {
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 13px;
+    padding-right: 0px;
+    border-radius: 27px;
+    color: hsl(356, 100%, 66%);
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+  }
+  .btn-1 {
+    color: white;
+    background-color: transparent;
+    font-size: 14px;
+    /* padding-left: 4px; */
+  }
+  .btn-2 {
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 34px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .Headline,
+  .subHeadline {
+    position: absolute;
+    top: 30%;
+    left: 23%;
+    z-index: 1;
+    margin: auto;
+  }
+  .subHeadline {
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+    top: 43%;
+    left: 35%;
+  }
+  
+  .subheadline-text {
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+  }
+  .headline-text::before {
+    font-family: "Overpass", sans-serif;
+    font-size: 51px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .header-buttons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 43%;
+    left: 40%;
+    z-index: 1;
+  }
+  .header-buttons {
+    gap: 1rem;
+  }
+  .headline-text {
+    font-family: "Overpass", sans-serif;
+  }
+  .subheadline-text {
+    font-family: "Overpass", sans-serif;
+  }
+  .header-btn {
+    font-family: "Ubuntu", "sans-serif";
+    font-weight: 600;
+    padding: 14px 23px;
+    font-size: 16px;
+  }
+  
+  .header-btn-2 {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .heading {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .heading-body {
+    color: hsl(208, 49%, 24%);
+    font-family: "Overpass", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 6rem;
+  }
+  
+  .sec-1-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    overflow: visible;
+  }
+  .sec-1-icon {
+    position: relative;
+    top: 0%;
+    right: -6%;
+    height: 42rem;
+    width: 47rem;
+  
+    background-size: cover;
+  }
+  .sub-body-heading-1 {
+    /* color: hsl(208, 49%, 24%); */
+    margin-top: 10rem;
+    margin-left: 5rem;
+    font-family: "Overpass", sans-serif;
+    /* font-size: 20px; */
+  }
+  .sec-1-sub-heading {
+    color: hsl(208, 49%, 24%);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  .sub-body-heading-2 {
+    width: 550px;
+    position: relative;
+  }
+  .sub-body-text {
+    line-height: 1.7rem;
+    color: hsl(207, 13%, 34%);
+    margin-bottom: 4rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .half-container {
+    width: 100%;
+    height: 70vh;
+    transform: scale(1);
+  }
+  
+  .sec-3 {
+    margin-top: 10rem;
+    height: 45vh;
+    width: 100%;
+    position: relative;
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    overflow: hidden;
+    background-image: linear-gradient(
+      to right,
+      hsl(237, 17%, 21%),
+      hsl(237, 17%, 32%)
+    );
+  }
+  .overflow-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: visible; /* Set overflow property to visible for the overflowing item */
+  }
+  .overflow-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .overflow-item.before {
+    height: 60rem;
+    width: 60rem;
+    position: absolute;
+    top: 5%; /* Adjust positioning to make it overflow */
+    left: 22%; /* Adjust positioning to make it overflow */
+    transform: translate(-50%, -50%);
+    background-image: url("./images/bg-pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .overflow-item.after {
+    position: fixed;
+    top: 36%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    background-image: url("./images/illustration-phones.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 34rem;
+    width: 54rem;
+    z-index: 2;
+  }
+  .sec-3-icon {
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .sec-3-body {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 5rem;
+  }
+  
+  .sec-3-heading {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 3;
+    font-family: "Overpass", sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+  }
+  .sec-3-text {
+    font-family: "Overpass", sans-serif;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    z-index: 4;
+    padding-right: 20px;
+    max-width: 34rem;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.8rem;
+  }
+  .sec-4-body {
+    display: flex;
+  }
+  .sec-4sub-body {
+    width: 50%;
+  }
+  .sec-4-icon {
+    /* background-color: aqua; */
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+  }
+  .sec-4-icon::before {
+    content: "";
+    width: 66rem;
+    height: 53rem;
+    background-image: url("./images/illustration-laptop-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 10%;
+    left: 27%;
+    transform: translate(-50%, -11%);
+    z-index: 1;
+  }
+  .sec-4-heading {
+    margin-top: 9rem;
+    color: hsl(208, 49%, 24%);
+  
+    font-size: 1.8rem;
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+  }
+  .sec-4-text {
+    margin-top: 2.3rem;
+    max-width: 36rem;
+    color: hsl(207, 13%, 34%);
+    line-height: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+  }
+  .nm {
+    margin-top: 4rem;
+  }
+  
+  .footer {
+    height: 45vh;
+    width: 100vw;
+  }
+  
+  .sec-5-foot {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(240, 10%, 16%);
+    border-top-right-radius: 6rem;
+    /* padding-right: 2rem; */
+    gap: 8rem;
+    overflow: hidden;
+    margin-top: 15rem;
+  }
+  
+  .footer-elem {
+    margin-top: 5rem;
+  }
+  .footer-head {
+    font-family: "Overpass", sans-serif;
+    padding-right: 1rem;
+  }
+  .xm {
+    padding-left: 0.4rem;
+  }
+  .footer-list {
+    margin-top: 2rem;
+  }
+  .footer-list ul {
+    font-weight: 100;
+  }
+  .footer-list ul li {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: hsl(240, 1%, 74%);
+    margin: 0 auto;
+    list-style: none;
+    margin-top: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* hover btns css */
+  
+  .product-btn,
+  .company.btn,
+  .connect-btn {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dropdown-1,
+  .dropdown-2,
+  .dropdown-3 {
+    display: none;
+    position: absolute;
+    /* z-index: 1; */
+    border-radius: 10px;
+    padding-top: 2rem;
+  }
+  
+  .dropdown-1 a,
+  .dropdown-2 a,
+  .dropdown-3 a {
+    text-decoration: none;
+    display: block;
+    background-color: aliceblue;
+    color: hsl(240, 10%, 16%);
+    padding-left: 5px;
+  }
+  
+  .dropdown-1 a {
+    padding: 22px 4rem;
+    padding-left: 1rem;
+  }
+  .dropdown-2 a {
+    padding: 22px 4rem;
+    padding-left: 1rem;
+  }
+  .dropdown-3 a {
+    padding: 22px 4rem;
+    padding-left: 1rem;
+  }
+  .padding-top {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    padding-top: 2rem;
+  }
+  .padding-bottom {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  .product-btn:hover .dropdown-1 {
+    display: block;
+  }
+  .product-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .dropdown-1 a:hover {
+    color: black;
+    font-weight: bold;
+  }
+  /*  */
+  .dropdown-2 a:hover {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .company-btn:hover {
+    text-decoration: underline;
+  }
+  .company-btn:hover .dropdown-2 {
+    display: block;
+  }
+  /*  */
+  .connect-btn:hover {
+    text-decoration: underline;
+  }
+  .connect-btn:hover .dropdown-3 {
+    display: block;
+  }
+  .product-btn:hover .arrow-1 {
+    transform: rotate(180deg);
+  }
+  .company-btn:hover .arrow-2 {
+    transform: rotate(180deg);
+  }
+  .connect-btn:hover .arrow-3 {
+    transform: rotate(180deg);
+  }
+  .dropdown-3 a:hover {
+    color: black;
+    font-weight: bold;
+  }
+
+  .btn.btn-2:hover,
+    .header-btn:hover {
+      color: aliceblue;
+      background-color: rgba(240, 248, 255, 0.295);
+    }
+  
+    .header-btn-2:hover {
+      background-color: rgb(240, 248, 255);
+      color: hsl(356, 100%, 66%);
+    }
+  
+  /* hamburger */
+  
+  @media (min-width: 1351px) {
+    .navbar-start ul li,
+    .navbar-end ul li {
+      font-size: 16px;
+    }
+    .navbar-start ul,
+    .navbar-end ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      z-index: 2;
+    }
+  
+    .btn-1 {
+      color: white;
+      background-color: transparent;
+      font-size: 16px;
+      padding-left: 0px;
+    }
+    .btn-2 {
+      font-size: 14px;
+      padding-left: 37px;
+      padding-right: 37px;
+      padding-top: 15px;
+      padding-bottom: 16px;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+  
+    .btn.btn-2:hover,
+    .header-btn:hover {
+      color: aliceblue;
+      background-color: rgba(240, 248, 255, 0.295);
+    }
+  
+    .header-btn-2:hover {
+      background-color: rgb(240, 248, 255);
+      color: hsl(356, 100%, 66%);
+    }
+    .navbar-start ul {
+      position: absolute;
+      margin-left: 95px;
+      gap: 2rem;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      /* margin-top: 55px; */
+      top: 1.8%;
+    }
+  
+    .navbar-end ul {
+      position: absolute;
+      top: 1.8%;
+      left: 71%;
+      gap: 2rem;
+      margin-top: 55px;
+    }
+  
+    .Headline {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      margin: auto;
+    }
+    .subHeadline {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      top: 35%;
+      left: 35%;
+      letter-spacing: 1px;
+    }
+    .headline-text {
+      font-family: "Overpass", sans-serif;
+      /* font-family: 'Ubuntu'; */
+      font-weight: 400;
+      font-size: 56px;
+      text-align: center;
+      margin: auto;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 19px;
+    }
+  
+    /* sec-1 */
+    .sub-body-text {
+      width: 45rem;
+    }
+  }
+  @media (max-width: 1350px) {
+    .navbar-start ul li,
+    .navbar-end ul li {
+      font-size: 16px;
+    }
+    .navbar-start ul,
+    .navbar-end ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      z-index: 2;
+    }
+  
+    .btn-1 {
+      color: white;
+      background-color: transparent;
+      font-size: 16px;
+      padding-left: 0px;
+    }
+    .btn-2 {
+      font-size: 14px;
+      padding-left: 37px;
+      padding-right: 37px;
+      padding-top: 15px;
+      padding-bottom: 16px;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .navbar-start ul {
+      position: absolute;
+      margin-left: 95px;
+      gap: 2rem;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      /* margin-top: 60px; */
+    }
+  
+    .navbar-end ul {
+      position: absolute;
+      top: 1.8%;
+      left: 71%;
+      gap: 2rem;
+      /* translate: (-50%,-50%); */
+      margin-top: 55px;
+      /* font-size: 12px; */
+    }
+  
+    .Headline {
+      position: absolute;
+      top: 26%;
+      left: 25%;
+      margin: auto;
+    }
+    .subHeadline {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      top: 35%;
+      left: 36%;
+      letter-spacing: 1px;
+    }
+    .headline-text {
+      /* font-family: 'Ubuntu', sans-serif; */
+      /* font-family: 'Ubuntu'; */
+      font-weight: 400;
+      font-size: 53px;
+      text-align: center;
+      margin: auto;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 42%;
+      left: 40%;
+      z-index: 1;
+    }
+    .sec-1-icon {
+      top: 1%;
+      height: 41rem;
+      width: 46rem;
+      right: -8%;
+    }
+  }
+  @media (max-width: 1200px) {
+    .navbar-start ul li,
+    .navbar-end ul li {
+      font-size: 16px;
+    }
+    .navbar-start ul,
+    .navbar-end ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      z-index: 2;
+    }
+  
+    .btn-1 {
+      color: white;
+      background-color: transparent;
+      font-size: 16px;
+      padding-left: 0px;
+    }
+    .btn-2 {
+      font-size: 14px;
+      padding-left: 37px;
+      padding-right: 37px;
+      padding-top: 15px;
+      padding-bottom: 16px;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .navbar-start ul {
+      position: absolute;
+      top: 1.8%;
+      margin-left: 95px;
+      gap: 2rem;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      /* margin-top: 60px; */
+    }
+  
+    .navbar-end ul {
+      position: absolute;
+      top: 1.8%;
+      left: 71%;
+      gap: 2rem;
+      /* translate: (-50%,-50%); */
+      margin-top: 55px;
+      /* font-size: 12px; */
+    }
+  
+    .Headline {
+      position: absolute;
+      top: 27%;
+      left: 25%;
+      margin: auto;
+    }
+    .subHeadline {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      top: 35%;
+      left: 36%;
+      letter-spacing: 1px;
+    }
+    .headline-text {
+      /* font-family: 'Ubuntu', sans-serif; */
+      /* font-family: 'Ubuntu'; */
+      font-weight: 400;
+      font-size: 48px;
+      text-align: center;
+      margin: auto;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 41%;
+      left: 40%;
+    }
+    .sec-1-body {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0rem;
+    }
+    .sec-1-icon {
+      margin: 0 auto;
+      left: 56%;
+    }
+  
+    .sub-body-heading-1,
+    .sub-body-text {
+      text-align: center;
+      padding: 0 10px;
+    }
+  
+    /* sec-4 */
+  
+    .sec-4-body {
+      display: flex;
+      flex-direction: column;
+      gap: 34rem;
+    }
+    .sec-4-icon::before {
+      left: 45%;
+    }
+    .sec-4-heading,
+    .sec-4-text {
+      text-align: center;
+    }
+    .sec-4sub-body {
+      width: 100%;
+    }
+    .sec-4-text {
+      max-width: 35rem;
+      /* margin-left: 20rem; */
+      margin: 2rem auto;
+    }
+    .sec-5-foot {
+      gap: 6rem;
+      }
+  }
+  @media (max-width: 1050px) {
+    .header-box {
+      width: 100vw;
+    }
+    .Headline {
+      position: absolute;
+      top: 28%;
+      left: 25%;
+      margin: auto;
+    }
+    .subHeadline {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      top: 35%;
+      left: 36%;
+      letter-spacing: 1px;
+    }
+    .headline-text {
+      /* font-family: 'Ubuntu', sans-serif; */
+      /* font-family: 'Ubuntu'; */
+      font-weight: 400;
+      font-size: 44px;
+      text-align: center;
+      margin: auto;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      z-index: 1;
+    }
+    .header-btn {
+      font-family: "Ubuntu", "sans-serif";
+      font-weight: 600;
+      padding: 12px 21px;
+      font-size: 16px;
+    }
+    .hamburger {
+      display: none;
+    }
+    .sec-1-body {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .sec-1-icon {
+      margin: 0 auto;
+      left: 44%;
+    }
+  
+    /* sec-3 */
+  
+    .overflow-item.after {
+      top: 30%;
+      left: 26%;
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+  @media (max-width: 950px) {
+    .header-box {
+      width: 100vw;
+    }
+    #product,
+    #connect,
+    #company,
+    #login,
+    #sign-up {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      z-index: 10;
+    }
+    .navbar-start ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 40rem;
+    }
+    .sec-1-body {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 41px;
+      text-align: center;
+      margin: auto;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+    }
+    .subHeadline {
+      top: 34%;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 39%;
+      left: 39%;
+      z-index: 1;
+    }
+    .header-btn {
+      font-family: "Ubuntu", "sans-serif";
+      font-weight: 600;
+      padding: 12px 21px;
+      font-size: 16px;
+    }
+    .sec-1-body {
+      gap: 0rem;
+    }
+    .sub-body-heading-2 {
+      height: 28rem;
+      width: 32rem;
+      margin: auto;
+      /* margin-left: 12rem; */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("./images/illustration-editor-mobile.svg");
+    }
+    .sec-1-icon {
+      display: none;
+    }
+    .sub-body-heading-1 {
+      margin-top: 0rem;
+      margin-left: 5rem;
+      font-family: "Overpass", sans-serif;
+    }
+    .sec-1-sub-heading {
+      color: hsl(208, 49%, 24%);
+      font-size: 25px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+    .sub-body-text {
+      line-height: 1.7rem;
+      color: hsl(207, 13%, 34%);
+      margin-bottom: 2rem;
+      letter-spacing: 1.3px;
+      text-align: center;
+    }
+    .sec-5-foot {
+      gap: 9rem;
+    }
+  
+    .hamburger {
+      /* position: relative;
+      display: inline-block; */
+      margin-top: 2.7rem;
+      display: inline-block;
+      position: absolute;
+      top: 30;
+      right: 40;
+      z-index: 100;
+      /* z-index: 9999; */
+    }
+    .ham-down {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      float: left;
+      right: 0;
+      padding: 0rem 0rem;
+      padding-top: 3rem;
+      position: absolute;
+      z-index: 1;
+      overflow: visible;
+    }
+    .block{
+      display: none;  
+    }
+    .ham-down1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        float: left;
+        right: 0;
+        padding: 0rem 0rem;
+        padding-top: 3rem;
+        position: absolute;
+        z-index: 2;
+      }
+    .ham-down a {
+      display: flex;
+      align-items: center;
+      /* font-family: sans-serif; */
+      font-size: 17px;
+      padding: 0rem 2rem;
+      padding: 28px 0px;
+      padding-left: 6rem;
+      padding-right: 12rem;
+      color: hsl(208, 49%, 24%);
+      font-size: 17.5px;
+      background-color: rgb(255, 255, 255);
+      font-family: "Overpass", sans-serif;
+      text-decoration: none;
+    
+    }
+    .overflow {
+    position: absolute;
+    left: 50;
+    top: 20;
+    overflow: visible; /* Allow the container to overflow */
+  }
+  .sec-5-foot {
+    gap: 4rem;
+    }
+
+    .arrow-link{
+      position: relative;
+      display: inline-block;
+    }
+    .inner-drop-1{
+      padding: 1rem;
+      display: none;
+      position: absolute;
+      top: 5.5rem;
+      /* top: 100%; */
+      left: 0;
+      /* left: 50%; */
+
+    }
+    .inner-drop-1 a{
+      border: 2px solid orange;
+      display: block;
+      height: 50px;
+      width: 100px;
+      align-items: center;
+      padding-top: 10px;
+      display: flex;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .inner-drop-1.show {
+      display: block;
+    }
+
+  }
+  .sign-up {
+    border: none;
+    padding: 8px 15px;
+  }
+
+  /* .inner-list{
+    display: block;
+    color: hsl(208, 49%, 24%);
+    background-color: aliceblue;
+    font-family: sans-serif;
+    font-weight: 600;
+    height: 50px; 
+    width: 287px;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding-top: 14px;
+    padding-right: 23px;
+  }
+  .arrow-lin:hover .inner-list{
+    display: block;
+
+  } */
+  
+  @media (max-width: 900px) {
+    .navbar-start ul {
+      gap: 36rem;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 39px;
+      text-align: center;
+      margin: auto;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 39%;
+      left: 38%;
+    }
+    .sec-3-heading {
+      font-size: 32px;
+    }
+  
+    /* sec-4 */
+  
+    .sec-4-body {
+      display: flex;
+      flex-direction: column;
+      gap: 34rem;
+    }
+    .sec-4-icon::before {
+      width: 57rem;
+      height: 42rem;
+      left: 50%;
+    }
+    .sec-4-heading,
+    .sec-4-text {
+      text-align: center;
+    }
+    .sec-4sub-body {
+      width: 100%;
+    }
+    .sec-4-text {
+      max-width: 35rem;
+      /* margin-left: 20rem; */
+      margin: 2rem auto;
+    }
+  }
+  @media (max-width: 850px) {
+    .navbar-start ul {
+      gap: 34rem;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 36px;
+      text-align: center;
+      margin: auto;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 38%;
+      z-index: 1;
+    }
+    .header-btn {
+      font-family: "Ubuntu", "sans-serif";
+      font-weight: 600;
+      padding: 10px 18px;
+      font-size: 16px;
+    }
+    .sec-3-heading {
+      padding-right: 1rem;
+      font-size: 32px;
+      text-align: center;
+    }
+    .sec-3-text {
+      margin-top: 1rem;
+    }
+    .overflow-item.after {
+      top: 30%;
+      left: 26%;
+      width: 27rem;
+      height: 27rem;
+    }
+    .sec-5-foot {
+      gap: 3rem;
+    }
+
+  }
+  @media (max-width: 800px) {
+    .navbar-start ul {
+      gap: 31rem;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 36px;
+      text-align: center;
+      margin: auto;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 750px) {
+    .navbar-start ul {
+      gap: 28rem;
+      margin-left: 88px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 33px;
+      text-align: center;
+      margin: auto;
+    }
+    .subHeadline {
+      left: 34%;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 38%;
+      z-index: 1;
+    }
+    .header-btn {
+      font-family: "Ubuntu", "sans-serif";
+      font-weight: 600;
+      padding: 10px 18px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 700px) {
+    .navbar-start ul {
+      gap: 26rem;
+      margin-left: 85px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 33px;
+      text-align: center;
+      margin: auto;
+    }
+    .subHeadline {
+      top: 34%;
+      left: 31%;
+    }
+    .Headline {
+      top: 28%;
+      left: 24%;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 35%;
+      z-index: 1;
+    }
+  
+    /* sec-3 */
+    .sec-3 {
+      width: 100vw;
+      height: 70vh;
+    }
+    .overflow-item.after {
+      top: 23%;
+      left: 50%;
+      width: 27rem;
+      height: 27rem;
+    }
+    .overflow-item.before {
+      width: 55rem;
+      height: 55rem;
+    }
+    .sec-3-heading,
+    .sec-3-text {
+      margin-top: 6rem;
+    }
+    .sec-3-heading {
+      width: 370px;
+      top: 41%;
+      left: 23%;
+    }
+    .sec-3-text {
+      text-align: center;
+      top: 56%;
+      width: 400px;
+      left: 25%;
+    }
+    .sec-4-icon::before {
+      width: 48rem;
+      height: 36rem;
+      left: 50%;
+      margin-top: 3rem;
+    }
+    .sec-4-heading {
+      margin-top: 0rem;
+    }
+    .sec-5-foot {
+      gap: 2rem;
+    }
+  }
+  @media (max-width: 650px) {
+    .navbar-start ul {
+      gap: 21rem;
+      margin-left: 81px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 30px;
+      text-align: center;
+      margin: auto;
+    }
+    .subHeadline {
+      left: 31%;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 35%;
+      z-index: 1;
+    }
+    .header-btn {
+      font-family: "Ubuntu", "sans-serif";
+      font-weight: 600;
+      padding: 10px 18px;
+      font-size: 13px;
+    }
+    .sec-5-foot {
+      gap: 2rem;
+    }
+    .sec-3 {
+      width: 100vw;
+      height: 70vh;
+    }
+    .overflow-item.after {
+      top: 23%;
+      left: 50%;
+      width: 27rem;
+      height: 27rem;
+    }
+    .overflow-item.before {
+      width: 55rem;
+      height: 55rem;
+    }
+    .sec-3-heading,
+    .sec-3-text {
+      margin-top: 6rem;
+    }
+    .sec-3-heading {
+      width: 370px;
+      top: 41%;
+      left: 23%;
+    }
+    .sec-3-text {
+      text-align: center;
+      top: 56%;
+      width: 400px;
+      left: 25%;
+    }
+  
+    /* sec-4 */
+  
+    .sec-4-body {
+      display: flex;
+      flex-direction: column;
+      gap: 34rem;
+    }
+    .sec-4-icon::before {
+      width: 48rem;
+      height: 36rem;
+      left: 50%;
+    }
+    .sec-4-heading,
+    .sec-4-text {
+      text-align: center;
+    }
+    .sec-4-heading {
+      margin-top: -2rem;
+    }
+    .sec-4sub-body {
+      width: 100%;
+    }
+    .sec-4-text {
+      max-width: 35rem;
+      margin: 2rem auto;
+    }
+    .nm {
+      margin-top: 1rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .navbar-start ul {
+      gap: 19rem;
+      margin-left: 76px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 30px;
+      text-align: center;
+      margin: auto;
+    }
+    .subHeadline {
+      left: 31%;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 35%;
+      z-index: 1;
+    }
+    .header-btn {
+      font-family: "Ubuntu", "sans-serif";
+      font-weight: 600;
+      padding: 10px 18px;
+      font-size: 13px;
+    }
+  
+    /* Sec-1 */
+    .heading-body {
+      font-size: 35px;
+    }
+    .sec-1-body {
+      gap: 0rem;
+    }
+    .sub-body-heading-2 {
+      height: 28rem;
+      width: 32rem;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("./images/illustration-editor-mobile.svg");
+    }
+    .sec-1-icon {
+      display: none;
+    }
+    .sub-body-heading-1 {
+      /* margin-top: 0rem; */
+      /* margin-left: 5rem; */
+      margin: auto;
+      font-family: "Overpass", sans-serif;
+    }
+    .sec-1-sub-heading {
+      color: hsl(208, 49%, 24%);
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+    .sub-body-text {
+      line-height: 1.7rem;
+      color: hsl(207, 13%, 34%);
+      margin-bottom: 2rem;
+      letter-spacing: 1.3px;
+      text-align: center;
+      font-size: 15px;
+      padding: 0 3px;
+    }
+  
+    /* sec-3 */
+  
+    .sec-3 {
+      width: 100vw;
+      height: 70vh;
+    }
+    .overflow-item.after {
+      top: 20%;
+      left: 50%;
+      width: 27rem;
+      height: 27rem;
+    }
+    .overflow-item.before {
+      left: 45%;
+      width: 55rem;
+      height: 55rem;
+    }
+    .sec-3-heading,
+    .sec-3-text {
+      margin-top: 6rem;
+    }
+    .sec-3-heading {
+      width: 370px;
+      top: 41%;
+      left: 20%;
+    }
+    .sec-3-text {
+      text-align: center;
+      top: 56%;
+      width: 400px;
+      left: 20%;
+    }
+  }
+  @media (max-width: 550px) {
+    .navbar-start ul {
+      gap: 18rem;
+      margin-left: 64px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 27px;
+      text-align: center;
+      margin: auto;
+      max-width: 350px;
+    }
+    .Headline {
+      top: 29%;
+      left: 21%;
+    }
+    .subHeadline {
+      left: 26%;
+    }
+    .subheadline-text {
+      font-family: "Overpass", sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 33%;
+      z-index: 1;
+    }
+    .header-btn {
+      font-family: "Ubuntu", "sans-serif";
+      font-weight: 600;
+      padding: 10px 18px;
+      font-size: 13px;
+    }
+    .sec-3 {
+      width: 100vw;
+      height: 70vh;
+    }
+    .overflow-item.after {
+      top: 17%;
+      left: 50%;
+      width: 27rem;
+      height: 27rem;
+    }
+    .overflow-item.before {
+      left: 45%;
+      width: 55rem;
+      height: 55rem;
+    }
+    .sec-3-heading,
+    .sec-3-text {
+      margin-top: 6rem;
+    }
+    .sec-3-heading {
+      width: 370px;
+      top: 41%;
+      left: 18%;
+    }
+    .sec-3-text {
+      text-align: center;
+      top: 56%;
+      width: 400px;
+      left: 18%;
+    }
+  
+    /* sec-4 */
+  
+    .sec-4-body {
+      display: flex;
+      flex-direction: column;
+      gap: 34rem;
+    }
+    .sec-4-icon::before {
+      width: 38rem;
+      height: 28rem;
+      left: 50%;
+      top: 30%;
+      margin-top: 2rem;
+    }
+    .sec-4-heading,
+    .sec-4-text {
+      text-align: center;
+    }
+    .sec-4-heading {
+      margin-top: -4rem;
+    }
+    .sec-4sub-body {
+      width: 100%;
+    }
+    .sec-4-text {
+      max-width: 32rem;
+      padding: 0 2rem;
+      margin: 2rem auto;
+    }
+    .nm {
+      margin-top: 1rem;
+    }
+    /* sec-5 */
+  
+    .sec-5-foot {
+      gap: 0rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 3rem;
+      overflow: hidden;
+      text-align: center;
+      height: 110vh;
+    }
+  }
+  @media (max-width: 510px) {
+    .navbar-start ul {
+      gap: 15rem;
+      margin-left: 60px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 27px;
+      text-align: center;
+      margin: auto;
+      max-width: 350px;
+    }
+    .subHeadline {
+      left: 27%;
+    }
+    .Headline {
+      top: 29%;
+      left: 20%;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 32%;
+      z-index: 1;
+    }
+  
+    /* sec-1 */
+    .heading-body {
+      font-size: 35px;
+    }
+    .sec-1-body {
+      gap: 0rem;
+    }
+    .sub-body-heading-2 {
+      height: 25rem;
+      width: 29rem;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("./images/illustration-editor-mobile.svg");
+    }
+    .sec-1-icon {
+      display: none;
+    }
+    .sub-body-heading-1 {
+      /* margin-top: 0rem; */
+      /* margin-left: 5rem; */
+      margin: auto;
+      font-family: "Overpass", sans-serif;
+    }
+    .sec-1-sub-heading {
+      color: hsl(208, 49%, 24%);
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+    .sub-body-text {
+      line-height: 1.7rem;
+      color: hsl(207, 13%, 34%);
+      margin-bottom: 2rem;
+      letter-spacing: 1.3px;
+      text-align: center;
+      font-size: 15px;
+      padding: 0 5px;
+    }
+  
+    /* sec-3 */
+    .sec-3 {
+      width: 100vw;
+      height: 70vh;
+    }
+    .overflow-item.after {
+      top: 15%;
+      left: 50%;
+      width: 24rem;
+      height: 24rem;
+    }
+    .overflow-item.before {
+      left: 45%;
+      width: 50rem;
+      height: 50rem;
+    }
+    .sec-3-heading,
+    .sec-3-text {
+      margin-top: 6rem;
+    }
+    .sec-3-heading {
+      width: 370px;
+      top: 41%;
+      left: 16%;
+    }
+    .sec-3-text {
+      text-align: center;
+      top: 56%;
+      width: 400px;
+      left: 16%;
+      font-size: 12px;
+      line-height: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+  @media (max-width: 450px) {
+    .navbar-start ul {
+      gap: 13rem;
+      margin-left: 55px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 27px;
+      text-align: center;
+      margin: auto;
+      max-width: 280px;
+    }
+    .subHeadline {
+      left: 20%;
+    }
+    .subheadline-text {
+      max-width: 280px;
+      text-align: center;
+    }
+    .Headline {
+      top: 26%;
+      left: 19%;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 29%;
+      z-index: 1;
+    }
+    /* sec-1 */
+    .heading-body {
+      font-size: 32px;
+      margin-bottom: 2rem;
+    }
+    .sec-1-body {
+      gap: 0rem;
+    }
+    .sub-body-heading-2 {
+      height: 21rem;
+      width: 25rem;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("./images/illustration-editor-mobile.svg");
+    }
+    .sec-1-icon {
+      display: none;
+    }
+    .sub-body-heading-1 {
+      /* margin-top: 0rem; */
+      /* margin-left: 5rem; */
+      margin: auto;
+      font-family: "Overpass", sans-serif;
+    }
+    .sec-1-sub-heading {
+      color: hsl(208, 49%, 24%);
+      font-size: 23px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+    .sub-body-text {
+      line-height: 1.7rem;
+      color: hsl(207, 13%, 34%);
+      margin-bottom: 2rem;
+      letter-spacing: 1.3px;
+      text-align: center;
+      font-size: 14px;
+      padding: 0 5px;
+    }
+  
+    /* sec-3 */
+    .sec-3 {
+      width: 100vw;
+      height: 70vh;
+    }
+    .overflow-item.after {
+      top: 15%;
+      left: 50%;
+      width: 24rem;
+      height: 24rem;
+    }
+    .overflow-item.before {
+      left: 45%;
+      width: 50rem;
+      height: 50rem;
+    }
+    .sec-3-heading,
+    .sec-3-text {
+      margin-top: 6rem;
+    }
+    .sec-3-heading {
+      width: 370px;
+      top: 40%;
+      left: 11%;
+    }
+    .sec-3-text {
+      text-align: center;
+      top: 56%;
+      width: 350px;
+      left: 16%;
+      font-size: 12px;
+      line-height: 1.5rem;
+    }
+  
+    .sec-4-body {
+      display: flex;
+      flex-direction: column;
+      gap: 34rem;
+    }
+    .sec-4-icon::before {
+      width: 34rem;
+      height: 25rem;
+      left: 50%;
+      top: 30%;
+      margin-top: 5rem;
+    }
+    .sec-4-heading,
+    .sec-4-text {
+      text-align: center;
+    }
+    .sec-4-heading {
+      margin-top: -4rem;
+    }
+    .sec-4sub-body {
+      width: 100%;
+    }
+    .sec-4-text {
+      max-width: 32rem;
+      padding: 0 2rem;
+      margin: 2rem auto;
+    }
+    .nm {
+      margin-top: 1rem;
+    }
+  }
+  @media (max-width: 410px) {
+    .navbar-start ul {
+      gap: 12rem;
+      margin-left: 20px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 27px;
+      text-align: center;
+      margin: auto;
+      max-width: 270px;
+    }
+    .subHeadline {
+      left: 18%;
+    }
+    .subheadline-text {
+      width: 260px;
+      text-align: center;
+    }
+    .Headline {
+      top: 26%;
+      left: 17%;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 24%;
+      z-index: 1;
+    }
+  
+    .sec-3-heading {
+      left: 6%;
+    }
+    .sec-3-text {
+      left: 8%;
+    }
+  }
+  @media (max-width: 381px) {
+    .navbar-start ul {
+      gap: 11rem;
+      margin-left: 5px;
+    }
+    .headline-text {
+      font-weight: 400;
+      font-size: 27px;
+      text-align: center;
+      margin: auto;
+      max-width: 250px;
+    }
+    .subHeadline {
+      left: 19%;
+    }
+    .Headline {
+      top: 26%;
+      left: 17%;
+    }
+    .subheadline-text {
+      max-width: 230px;
+      text-align: center;
+    }
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 38%;
+      left: 20%;
+      z-index: 1;
+    }
+  
+    /* sec-1 */
+    .heading-body {
+      font-size: 28px;
+      margin-bottom: 2rem;
+    }
+    .sec-1-body {
+      gap: 0rem;
+    }
+    .sub-body-heading-2 {
+      height: 18rem;
+      width: 22rem;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("./images/illustration-editor-mobile.svg");
+    }
+    .sec-1-icon {
+      display: none;
+    }
+    .sub-body-heading-1 {
+      /* margin-top: 0rem; */
+      /* margin-left: 5rem; */
+      margin: auto;
+      font-family: "Overpass", sans-serif;
+    }
+    .sec-1-sub-heading {
+      color: hsl(208, 49%, 24%);
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+    .sub-body-text {
+      line-height: 1.7rem;
+      color: hsl(207, 13%, 34%);
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 13px;
+      padding: 0 5px;
+    }
+  
+    /* sec-3 */
+    .sec-3 {
+      width: 100vw;
+      height: 70vh;
+    }
+    .overflow-item.after {
+      top: 15%;
+      left: 50%;
+      width: 22rem;
+      height: 22rem;
+    }
+    .overflow-item.before {
+      left: 45%;
+      width: 50rem;
+      height: 50rem;
+    }
+    .sec-3-heading,
+    .sec-3-text {
+      margin-top: 6rem;
+    }
+    .sec-3-heading {
+      width: 370px;
+      top: 38%;
+      left: 4%;
+    }
+    .sec-3-text {
+      text-align: center;
+      top: 56%;
+      width: 320px;
+      left: 11%;
+      font-size: 12px;
+      line-height: 1.5rem;
+    }
+  }
+  @media (max-width: 365px) {
+    .navbar-start ul {
+      gap: 10rem;
+      margin-left: 5px;
+    }
+  }
+  @media (max-height: 600px) {
+    .subHeadline {
+      top: 35%;
+    }
+  }
+  @media (max-height: 650px) {
+    .subHeadline {
+      top: 37%;
+    }
+    .header-buttons {
+      top: 46%;
+    }
+  }
+  @media (max-height: 700px) {
+    .subHeadline {
+      top: 37%;
+    }
+    .header-buttons {
+      top: 46%;
+    }
+    .sec-3-heading {
+      font-size: 28px;
+    }
+    .sec-3-text {
+      font-size: 10px;
+    }
+  }
+  @media (max-height: 750px) {
+    .subHeadline {
+      top: 37%;
+    }
+    .header-buttons {
+      top: 46%;
+    }
+    .sec-3-heading {
+      top: 26%;
+    }
+    .sec-3-text {
+      top: 48%;
+    }
+  }
+  @media (max-height: 1000px) {
+    .subHeadline {
+      top: 37%;
+    }
+    .header-buttons {
+      top: 46%;
+    }
+  }
+  
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
